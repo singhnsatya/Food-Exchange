@@ -15,7 +15,7 @@ class InjectedApp extends Component {
   constructor() {
     super();
     this.state = {
-      endpoint: "http://ec2-3-16-217-186.us-east-2.compute.amazonaws.com/api",
+      endpoint: "http://ec2-18-224-73-177.us-east-2.compute.amazonaws.com/api",
       defaultCalls: true,
       allCustomers: 0,
       currentUser: undefined,
