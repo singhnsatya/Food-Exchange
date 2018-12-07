@@ -1,6 +1,6 @@
 import { foodStore } from '../mobx/store';
 const socketIOClient = require('socket.io-client');
-let endpoints = "http://localhost:3000";
+let endpoints = "http://localhost:3000/api";
 const socket = socketIOClient(endpoints);
 
 socket.on('connect', () => {

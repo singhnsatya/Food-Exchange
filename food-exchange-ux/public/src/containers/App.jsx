@@ -15,7 +15,7 @@ class InjectedApp extends Component {
   constructor() {
     super();
     this.state = {
-      endpoint: "http://localhost:3000",
+      endpoint: "http://localhost:3000/api",
       defaultCalls: true,
       allCustomers: 0,
       currentUser: undefined,
