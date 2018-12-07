@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:3000/api";
+axios.defaults.baseURL = "http://ec2-3-16-217-186.us-east-2.compute.amazonaws.com/api";
 
 const searchAPi = {
   async search(data) {
