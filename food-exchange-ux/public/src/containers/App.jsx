@@ -23,7 +23,7 @@ class InjectedApp extends Component {
       endDate: new Date(),
       selectName: "Select Hour" 
     };
-    this.socket = socketIOClient(this.state.endpoint);
+    this.socket = socketIOClient(this.state.endpoint, {transports: ['websocket']});
     this.worker;
   }
   componentDidMount() {

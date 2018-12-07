@@ -1,7 +1,7 @@
 import { foodStore } from '../mobx/store';
 const socketIOClient = require('socket.io-client');
 let endpoints = "http://ec2-18-224-73-177.us-east-2.compute.amazonaws.com/api";
-const socket = socketIOClient(endpoints);
+const socket = socketIOClient(endpoints, {transports: ['websocket']});
 
 socket.on('connect', () => {
   console.log('connected')
