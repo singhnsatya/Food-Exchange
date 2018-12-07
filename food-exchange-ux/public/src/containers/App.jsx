@@ -15,7 +15,7 @@ class InjectedApp extends Component {
   constructor() {
     super();
     this.state = {
-      endpoint: "http://ec2-18-224-73-177.us-east-2.compute.amazonaws.com/api",
+      endpoint: "http://ec2-18-224-73-177.us-east-2.compute.amazonaws.com",
       defaultCalls: true,
       allCustomers: 0,
       currentUser: undefined,
@@ -23,7 +23,7 @@ class InjectedApp extends Component {
       endDate: new Date(),
       selectName: "Select Hour" 
     };
-    this.socket = socketIOClient(this.state.endpoint, {transports: ['websocket']});
+    this.socket = socketIOClient(this.state.endpoint);
     this.worker;
   }
   componentDidMount() {
