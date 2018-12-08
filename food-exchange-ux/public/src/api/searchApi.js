@@ -4,7 +4,7 @@ axios.defaults.baseURL = "http://ec2-3-16-217-186.us-east-2.compute.amazonaws.co
 
 const searchAPi = {
   async search(data) {
-    let endpoint = `v1/search?startDate=${data.startDate}&endDate=${data.endDate}&hour=${data.hour}`;
+    let endpoint = `/search?startDate=${data.startDate}&endDate=${data.endDate}&hour=${data.hour}`;
     return await axios.get(endpoint);
   }
 }
