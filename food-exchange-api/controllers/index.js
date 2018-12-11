@@ -31,12 +31,12 @@ async function newCustomerRefresh(data, cb) {
     }
 	try {
 		Promise.all([
-		await Customer.find(exhistingCustomersCriteria).countDocuments(), 
-		await Order.countDocuments(), 
-		await Order.find({"cancelled": true}).countDocuments(),
-		await Order.find({"delivered": true}).countDocuments(),
-		await Order.find({"delivered": false}).countDocuments(),
-		await Order.find(newCustomersCriteria).countDocuments()
+			Customer.find(exhistingCustomersCriteria).countDocuments(), 
+			Order.countDocuments(), 
+			Order.find({"cancelled": true}).countDocuments(),
+			Order.find({"delivered": true}).countDocuments(),
+			Order.find({"delivered": false}).countDocuments(),
+			Order.find(newCustomersCriteria).countDocuments()
 		])
 		.then(result => {
 			// console.log('result', result)
@@ -143,12 +143,12 @@ async function searchByDate(req, res) {
     // console.log('cancelledOrders', cancelledOrdersCriteria)
 	try {
 		Promise.all([
-			await Customer.find(newCustomersCriteria).countDocuments(), 
-			await Customer.find(exhistingCustomersCriteria).countDocuments(), 
-			await Order.find({}).countDocuments(), 
-			await Order.find(deliveredOrdersCriteria).countDocuments(), 
-			await Order.find(notDeliveredOrdersCriteria).countDocuments(), 
-			await Order.find(cancelledOrdersCriteria).countDocuments(), 
+			Customer.find(newCustomersCriteria).countDocuments(), 
+			Customer.find(exhistingCustomersCriteria).countDocuments(), 
+			Order.find({}).countDocuments(), 
+			Order.find(deliveredOrdersCriteria).countDocuments(), 
+			Order.find(notDeliveredOrdersCriteria).countDocuments(), 
+			Order.find(cancelledOrdersCriteria).countDocuments(), 
 		])
 	    .then(result => {
 	    	let finalResult = { newCustomers: result[0],
